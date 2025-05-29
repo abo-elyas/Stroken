@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroken - Help</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .game-card {
+            border: 3px solid rgba(0, 114, 255, 0.4); /* Blue border */
+            min-height: 250px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 15px 3px rgba(0, 198, 255, 0.2), 0 5px 15px rgba(0, 0, 0, 0.4); /* Blue backlight/shadow */
+        }
+        .game-card:hover {
+            box-shadow: 0 0 50px 10px rgba(0, 198, 255, 0.9), 0 20px 40px -10px rgba(0, 0, 0, 0.8); /* Stronger blue backlight/shadow */
+            border-color: rgba(0, 114, 255, 1); /* Blue border on hover */
+            transform: translateY(-8px) scale(1.04);
+        }
+        .download-button {
+            background: linear-gradient(to right, #00c6ff, #0072ff); /* Blue gradient for button */
+        }
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 114, 255, 0.4); /* Blue shadow on button hover */
+        }
+        .search-input-focus:focus {
+            border-color: #0072ff; /* Darker blue for focus ring */
+            box-shadow: 0 0 0 3px rgba(0, 114, 255, 0.4); /* Blue ring on focus */
+        }
+        .icon-container {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background-color: #1a1a2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px 2px rgba(0, 114, 255, 0.1), 0 2px 5px rgba(0, 0, 0, 0.3); /* Blue shadow */
+            position: relative;
+            overflow: hidden;
+            border: 2.5px solid rgba(255, 255, 255, 0.3);
+            animation: float 3s ease-in-out infinite alternate;
+            transition: all 0.3s ease-in-out;
+        }
+        .icon-container:hover {
+            box-shadow: 0 0 40px 8px rgba(0, 114, 255, 0.7), 0 15px 30px -8px rgba(0, 0, 0, 0.7); /* Stronger blue shadow on hover */
+            border-color: rgba(38, 196, 255, 0.8); /* Lighter blue border on hover */
+        }
+        .icon-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #1a1a2e; /* Changed to match container color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .icon-logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+        .windows-logo-svg {
+            width: 24px;
+            height: 24px;
+            fill: #ffffff; /* White color for the Windows logo */
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+    <div class="flex-grow">
+        <header class="bg-gray-900 shadow-lg py-4 px-6 flex flex-col sm:flex-row items-center">
+            <a href="/">
+                <div class="flex flex-col items-center sm:items-start sm:mr-auto mb-4 sm:mb-0">
+                        <div class="flex items-center mb-2">
+                            <h1 class="text-4xl font-extrabold gradient-text">Stroken</h1>
+                        </div>
+                
+                    <p class="pr-5 text-lg font-medium text-gray-400 mt-1">Luas & Manifests Database for <a href="https://steamtools.net" target="_blank">Steam Tools</a></p>
+                </div>
+            </a>
+            <div class="relative flex-grow w-full sm:w-1/4 md:w-1/5 lg:w-1/6 xl:w-1/8 mx-auto">
+                </div>
+          <nav class="ml-4">
+                <a href="/" class="text-lg font-black text-blue-400 hover:text-blue-200 transition duration-300 ease-in-out">Back</a>
+            </nav>
+        </header>
+      
+        <div class="bg-gray-800 py-2 px-6 flex flex-row justify-start items-center rounded-b-xl shadow-lg">
+            <a href="https://store.steampowered.com/about" target="_blank">
+                <div class="icon-container mr-3">
+                    <div class="icon-circle">
+                        <img src="https://cdn.glitch.global/da67f322-69d7-4d7b-8a64-e2579b3854c0/steam-icon-14883.png?v=1748163328807" alt="Stroken Logo" class="icon-logo-img" onerror="this.onerror=null;this.src='https://placehold.co/40x40/a73b8f/ffffff?text=Logo';" />
+                    </div>
+                </div>
+            </a>
+            <a href="https://discord.gg/BS9xdWVPJs" target="_blank"> <div class="icon-container mr-3">
+                    <div class="icon-circle">
+                        <img src="https://cdn.glitch.global/da67f322-69d7-4d7b-8a64-e2579b3854c0/icons8-discord-new-1600.png?v=1748342235543" alt="Discord Logo" class="discord-logo-img" onerror="this.onerror=null;this.src='https://placehold.co/40x40/7289DA/ffffff?text=Disc';" />
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <main class="container mx-auto p-4 sm:p-6">
+            <h2 class="text-3xl font-bold text-blue-400 mb-6 text-center">Help & Information</h2>
+
+            <section class="bg-gray-800 p-6 rounded-lg shadow-lg mb-8">
+                <h3 class="text-2xl font-semibold text-blue-300 mb-4">About Stroken</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Stroken provides access to Steam's Luas and Manifests for free. Our goal is to offer a free steam gaming experiences.
+                </p>
+            </section>
+
+            <section class="bg-gray-800 p-6 rounded-lg shadow-lg mb-8">
+                <h3 class="text-2xl font-semibold text-blue-300 mb-4">Getting Started</h3>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li><strong>Finding Games:</strong> Use the search bar on the main page to find games by name or App ID (you can find it on <a href="https://steamdb.info" target="_blank">SteamDB</a>).</li>
+                    <li><strong>Game Information:</strong> Each game card displays its name and App ID, I lnow, this is a lot of information.</li>
+                    <li><strong>Downloading Files:</strong> Click the "Get Files" button on a game card to access the game's files via Google Drive (you will pass through ouo.io first).</li>
+                </ul>
+            </section>
+
+            <section class="bg-gray-800 p-6 rounded-lg shadow-lg mb-8">
+                <h3 class="text-2xl font-semibold text-blue-300 mb-4">Playing Games for Free</h3>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Once you've obtained the files (a .ZIP file contains a Lua and Manifests), follow these general steps:
+                </p>
+                <ol class="list-decimal list-inside text-gray-300 space-y-2">
+                    <li><strong>Install Steam Tools:</strong> Doownload, install, and setup Steam Tools on your computer, donwload it from <a href="https://steamtools.net" target="_blank"><span class="text-blue-300">here</span></a>.</li>
+                    <li><strong>Extract the Archive:</strong> Use a program like WinRAR, 7-Zip, or simply, File Explorer, to extract the contents of the downloaded file to a folder on your computer.</li>
+                    <li><strong>Open Steam Tools:</strong> After installing and setuping Steam Tools, Open it by double-clicking on its shortcut icon on your desktop, a floating icon will appear on you desktop.</li>
+                    <li><strong>Copy to Steam Tools:</strong> After opening Steam Tools and extracting the game's .ZIP file to a folder, you must selet all the files in that folder, then drag them to the floating icon (then release the files), if you were opening Steam from the beginning, you are one step far from seeing the game in your Steam games library (if you were not, stop reading, you have finished, now, you can open Steam and see the game in your library), the last step is restarting Steam, you can do it well by right-clicking on the floating icon, then pressing the "Restart Steam" option (the 2nd option).</li>
+                </ol>
+            </section>
+
+            <section class="bg-gray-800 p-6 rounded-lg shadow-lg mb-8">
+                <h3 class="text-2xl font-semibold text-blue-300 mb-4">Troubleshooting Common Issues</h3>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li><strong>Game Not Launching:</strong>
+                        <ul class="list-circle list-inside ml-4">
+                            <li>Ensure all files are extracted and coppied to the Steam Tools watermark.</li>
+                            <li>Update your graphics drivers.</li>
+                            <li>Install missing DirectX or Visual C++ Redistributables.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Missing DLL Errors:</strong> Search online for the specific DLL file and how to install it, or try reinstalling the game.</li>
+                    <li><strong>Low Performance:</strong> Check game's minimum system requirements against your computer's specifications.</li>
+                </ul>
+            </section>
+
+            <section class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold text-blue-300 mb-4">Disclaimer</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    All content provided on Stroken is available under the Public Domain. Users are responsible for ensuring their usage complies with local laws and regulations.
+                </p>
+            </section>
+
+            <div class="text-center mt-8">
+                <a href="/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out">
+                    Back to Stroken Store
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="bg-gray-900 py-4 px-6 text-center text-gray-400 mt-8 rounded-t-xl">
+        <p class="font-normal text-base mt-1">Content available under Public Domain.</p>
+    </footer>
+</body>
+</html>
