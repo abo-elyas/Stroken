@@ -11,14 +11,11 @@ const observerTarget = document.getElementById('observer-target');
 const gameCountElement = document.getElementById('game-count');
 const activeUsersCountElement = document.getElementById('active-users-count');
 
-// Initialize Socket.IO connection
-const socket = io(); // Connects to the server where the script is served from
+const socket = io();
 
-// Listen for active users updates from the server
 socket.on('active_users_update', (count) => {
     activeUsersCountElement.textContent = `${count.toLocaleString()} Active Users`;
 });
-
 
 function updateGameCountDisplay() {
     gameCountElement.textContent = filteredGames.length;
@@ -115,7 +112,6 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.1
 });
 
-// Initial fetch for active users on page load
 async function fetchInitialActiveUsers() {
     try {
         const response = await fetch('/api/active-users');
@@ -129,7 +125,6 @@ async function fetchInitialActiveUsers() {
         activeUsersCountElement.textContent = 'N/A';
     }
 }
-
 
 function handleDownload(secretId) {
     window.open(`https://ouo.io/${secretId}`, '_blank');
@@ -169,7 +164,6 @@ async function handleSearch() {
 searchInput.addEventListener('input', handleSearch);
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // Initial load of games when the page loads
     const { games: initialGames, totalCount: initialTotalCount } = await fetchGamesFromServer('', 0, gamesPerLoad);
     
     gameCountElement.textContent = initialTotalCount; 
@@ -179,6 +173,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadMoreGames();
     observer.observe(observerTarget);
 
-    // Fetch initial active users count
     fetchInitialActiveUsers();
 });
